@@ -95,10 +95,40 @@ public class Main {
         return res;
     }
 
+    public int reverse(int x) {
+        int rev = 0;
+        while (x != 0) {
+            if (rev < Integer.MIN_VALUE / 10 || rev > Integer.MAX_VALUE / 10) {
+                return 0;
+            }
+            int digit = x % 10;
+            x /= 10;
+            rev = rev * 10 + digit;
+        }
+        return rev;
+    }
+
+    public boolean balance = true;
+
+    public boolean isBalanced(TreeNode root) {
+        dfs(root);
+        return balance;
+    }
+
+    public Integer dfs(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+        int left = dfs(node.left);
+        int right = dfs(node.right);
+        if (Math.abs(left - right) > 1) {
+            balance = false;
+        }
+        return Math.max(left, right) + 1;
+    }
+
     public static void main(String[] args) {
         Main main = new Main();
-        int[] nums = new int[]{1, 2, 3, 5};
-        int target = 11;
-        System.out.println(main.lengthOfLIS(nums));
+        System.out.println(Integer.MAX_VALUE);
     }
 }
