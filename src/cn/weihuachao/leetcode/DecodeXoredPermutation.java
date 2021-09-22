@@ -1,5 +1,7 @@
 package cn.weihuachao.leetcode;
 
+import cn.weihuachao.util.PrintUtil;
+
 public class DecodeXoredPermutation {
     public int[] decode(int[] encoded) {
         int[] result = new int[encoded.length + 1];

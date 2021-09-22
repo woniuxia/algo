@@ -130,5 +130,10 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         System.out.println(Integer.MAX_VALUE);
+        int a = 1;
+        for (int i = 1; i <= 8 ; i++) {
+            a = a * i;
+            System.out.println(a);
+        }
     }
 }
