@@ -1,5 +1,7 @@
 package cn.weihuachao.leetcode;
 
+import cn.weihuachao.leetcode.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 

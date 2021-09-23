@@ -2,6 +2,8 @@ package cn.weihuachao.leetcode;
 
 // https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
 
+import cn.weihuachao.leetcode.common.ListNode;
+
 public class IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode tmpA = new ListNode();

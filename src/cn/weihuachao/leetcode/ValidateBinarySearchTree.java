@@ -1,5 +1,7 @@
 package cn.weihuachao.leetcode;
 
+import cn.weihuachao.leetcode.common.TreeNode;
+
 public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);

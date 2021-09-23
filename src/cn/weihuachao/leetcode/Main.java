@@ -1,5 +1,9 @@
 package cn.weihuachao.leetcode;
 
+import cn.weihuachao.leetcode.common.Node;
+import cn.weihuachao.leetcode.common.TreeNode;
+import cn.weihuachao.leetcode.linkedlist.FlattenAMultilevelDoublyLinkedList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -128,12 +132,35 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
-        System.out.println(Integer.MAX_VALUE);
-        int a = 1;
-        for (int i = 1; i <= 8 ; i++) {
-            a = a * i;
-            System.out.println(a);
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
+        Node node5 = new Node(5);
+        Node node6 = new Node(6);
+        node1.next = node2;
+        node2.prev = node1;
+
+        node2.next = node3;
+        node3.prev = node2;
+
+        node3.next = node4;
+        node4.prev = node3;
+
+        node3.child = node5;
+
+        node5.next = node6;
+        node6.prev = node5;
+        FlattenAMultilevelDoublyLinkedList s = new FlattenAMultilevelDoublyLinkedList();
+        Node ans = s.flatten(node1);
+
+        while (ans != null) {
+            System.out.println(ans.val);
+            System.out.println(ans.prev == null ? "null" : ans.prev.val);
+            System.out.println(ans.next == null ? "null" : ans.next.val);
+            System.out.println("=====================");
+            ans = ans.next;
         }
+
     }
 }

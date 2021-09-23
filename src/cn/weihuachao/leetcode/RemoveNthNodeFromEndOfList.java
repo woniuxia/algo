@@ -1,5 +1,7 @@
 package cn.weihuachao.leetcode;
 
+import cn.weihuachao.leetcode.common.ListNode;
+
 public class RemoveNthNodeFromEndOfList {
     class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
